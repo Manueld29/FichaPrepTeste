@@ -1,90 +1,59 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 public class testeEx1 {
-    P_EX1 C = new P_EX1();
-    int a,b,troco,n20,n10,n5,m2,m1;
-    a=14;
-    b=5;
-    //Teste a
-    troco=C.Troco(a);
-        if (troco==36){
-        System.out.println("Teste a Troco - Correto");
-    }else{
-        System.out.println("Teste a Troco - Errado");
-    }
-    n20=C.Notas20();
-        if (n20==1) {
-        System.out.println("Teste a Notas 20 - Correto");
-    }else {
-        System.out.println("Teste a Notas 20 - Errado");
-    }
 
-    n10=C.Notas10();
-        if (n10==1) {
-        System.out.println("Teste a Notas 10 - Correto");
-    }else {
-        System.out.println("Teste a Notas 10 - Errado");
-    }
+    P_EX1 Testes = new P_EX1();
+    int v1, v2, r1, r2;
 
-    n5=C.Notas5();
-        if (n5==1) {
-        System.out.println("Teste a Notas 20 - Correto");
-    }else {
-        System.out.println("Teste a Notas 20 - Errado");
+    @Test
+    void Ttroco() {
+        v1 = 14;
+        r1 = 36;
+        v2 = 5;
+        r2= 45;
+        Assertions.assertEquals(r1, Testes.Troco(v1));
+        Assertions.assertEquals(r2, Testes.Troco(v2));
     }
-    m2=C.Moedas2();
-        if (m2==0) {
-        System.out.println("Teste a Moedas 2 - Correto");
-    }else {
-        System.out.println("Teste a Moedas 2 - Errado");
+    void TN20(){
+        v1 = 36;
+        r1 = 1;
+        v2 = 19;
+        r2= 0;
+        Assertions.assertEquals(r1, Testes.Notas20(v1));
+        Assertions.assertEquals(r2, Testes.Notas20(v2));
     }
-    m1=C.Moedas1();
-        if (m1==1) {
-        System.out.println("Teste a Moedas 1 - Correto");
-    }else {
-        System.out.println("Teste a Moedas 1 - Errado");
+    void TN10(){
+        v1 = 36;
+        r1 = 3;
+        v2 = 9;
+        r2= 0;
+        Assertions.assertEquals(r1, Testes.Notas10(v1));
+        Assertions.assertEquals(r2, Testes.Notas10(v2));
     }
-    //teste b
-    troco=C.Troco(b);
-        if (troco==45){
-        System.out.println("Teste b Troco - Correto");
-    }else{
-        System.out.println("Teste b Troco - Errado");
+    void TN5(){
+        v1 = 36;
+        r1 = 7;
+        v2 = 4;
+        r2= 0;
+        Assertions.assertEquals(r1, Testes.Notas5(v1));
+        Assertions.assertEquals(r2, Testes.Notas5(v2));
     }
-
-    n20=C.Notas20();
-        if (n20==2) {
-        System.out.println("Teste b Notas 20 - Correto");
-    }else {
-        System.out.println("Teste b Notas 20 - Errado");
+    void TM2(){
+        v1 = 15;
+        r1 = 7;
+        v2 = 1;
+        r2= 0;
+        Assertions.assertEquals(r1, Testes.Moedas2(v1));
+        Assertions.assertEquals(r2, Testes.Moedas2(v2));
     }
-
-    n10=C.Notas10();
-        if (n10==0) {
-        System.out.println("Teste b Notas 10 - Correto");
-    }else {
-        System.out.println("Teste b Notas 10 - Errado");
+    void TM1(){
+        v1 = 15;
+        r1 = 15;
+        v2 = 0;
+        r2= 0;
+        Assertions.assertEquals(r1, Testes.Moedas1(v1));
+        Assertions.assertEquals(r2, Testes.Moedas1(v2));
     }
-
-    n5=C.Notas5();
-        if (n5==1) {
-        System.out.println("Teste b Notas 20 - Correto");
-    }else {
-        System.out.println("Teste b Notas 20 - Errado");
-    }
-    m2=C.Moedas2();
-        if (m2==0) {
-        System.out.println("Teste b Moedas 2 - Correto");
-    }else {
-        System.out.println("Teste b Moedas 2 - Errado");
-    }
-    m1=C.Moedas1();
-        if (m1==0) {
-        System.out.println("Teste b Moedas 1 - Correto");
-    }else {
-        System.out.println("Teste b Moedas 1 - Errado");
-    }
-
-
 }
-}
-
-        }
